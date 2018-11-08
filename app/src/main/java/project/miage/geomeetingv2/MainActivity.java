@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendRequest(View view){
         Intent intent = new Intent(this, send_request.class);
-        intent.putExtra("destinataires", adapter.getCheckedContacts());
+        intent.putParcelableArrayListExtra("destinataires", adapter.getCheckedContacts());
+        //intent.putExtra("destinataires", adapter.getCheckedContacts());
         startActivity(intent);
     }
     public void requestListener(View view){
