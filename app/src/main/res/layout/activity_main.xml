@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.miage.geomeetingv2.MainActivity">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="13dp"
+        android:id="@+id/searchView" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contactListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/sendRequest"
+        android:layout_below="@+id/searchView"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/contacts_list_background"
+        android:scrollbars="vertical" />
+
+
+    <Button
+        android:id="@+id/sendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contactListView"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_green_dark"
+        android:text="ENVOYER ->"
+        android:onClick="sendRequest"/>
+</RelativeLayout>
